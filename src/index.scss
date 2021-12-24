@@ -1,0 +1,93 @@
+@import './assets/scss/variables.scss';
+// $purple-300: #8b5cf6;
+
+div {
+  .ant-modal-root {
+    .ant-modal-wrap {
+      //   .ant-modal {
+      //   }
+      .ant-modal.ant-modal-confirm.ant-modal-confirm-error {
+        .ant-modal-content {
+          .ant-modal-body {
+            .ant-modal-confirm-body-wrapper {
+              .ant-modal-confirm-btns {
+                button.ant-btn.ant-btn-primary {
+                  //   background: #8b5cf6;
+                  //   border-color: #8b5cf6;
+                  background: $purple-300;
+                  border-color: $purple-300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ant-pagination-item-active,
+.ant-pagination-item:hover {
+  border-color: $purple-300;
+}
+.ant-select-focused {
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: $purple-100;
+}
+
+// .ant-pagination-item:hover {
+//   border-color: $purple-300;
+// }
+.ant-pagination-next,
+.ant-pagination-prev {
+  .ant-pagination-item-link:hover {
+    border-color: $purple-300;
+    // .anticon-right,
+    // .anticon-left {
+    //   svg:hover {
+    //   }
+    // }
+  }
+}
+
+.anticon {
+  svg:hover
+//   svg:not(:focus)
+  {
+    fill: $purple-300;
+  }
+}
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: $purple-300;
+}
+.ant-pagination-options {
+  //   .ant-pagination-options-size-changer:hover {
+  //     border-color: $purple-300;
+  //   }
+  .ant-pagination-options-quick-jumper {
+    input:hover,
+    input:focus {
+      border-color: $purple-300;
+    }
+    // input:hover {
+    //   border-color: $purple-300;
+    // }
+  }
+}
+
+.bg-purple-500 {
+  background-color: $purple-300;
+}
+.hover\:bg-purple-400:hover {
+  background-color: $purple-200;
+}
+
+// label {
+//   color: $purple-300;
+// }
+.text-purple-500 {
+  color: $purple-300;
+}
+// .bg-purple-400:hover {
+//   background-color: $purple-300;
+// }
