@@ -4,14 +4,10 @@ import '../index.scss';
 
 const ImageSearch = ({ searchText }) => {
   const [text, setText] = useState('');
-
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === '')
-      Modal.error({
-        // title: 'This is an error message',
-        content: 'Please enter some text for search',
-      });
+      Modal.error({ content: 'Please enter some text for search' });
     else searchText(text);
   };
 
@@ -38,3 +34,5 @@ const ImageSearch = ({ searchText }) => {
 };
 
 export default ImageSearch;
+
+// when we are not passing any props to child Components or passing some string, number or any other promitive value its working fine with React.memo but when passing arrays, and objects then its not work with React.memo

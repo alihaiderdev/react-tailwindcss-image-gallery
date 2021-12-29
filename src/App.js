@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Pagination, Select } from 'antd';
 import ImageCard from './components/ImageCard';
 import ImageSearch from './components/ImageSearch';
@@ -152,7 +152,11 @@ const App = () => {
 
   return (
     <div className='container mx-auto my-15'>
-      <ImageSearch searchText={(text) => setTerm(text)} />
+      <ImageSearch
+        searchText={useMemo(() => {
+          return (text) => setTerm(text);
+        }, [])}
+      />
 
       {!isLoading && images.length === 0 ? (
         <h1 className='text-5xl text-center mx-auto mt-32'>No Images Found</h1>
@@ -301,3 +305,27 @@ const App = () => {
 };
 
 export default App;
+
+// const Greeting = (props) => {
+//   console.log('Greeting Comp render');
+//   return <h1>Hi {props.name}!</h1>;
+// };
+
+// const Greeting = React.memo((props) => {
+//   console.log('Greeting Comp render');
+//   return <h1>Hi {props.name}!</h1>;
+// });
+
+// function App() {
+//   const [counter, setCounter] = React.useState(0);
+//   React.useEffect(() => {
+//     setInterval(() => {
+//       setCounter(counter + 1);
+//     }, 2000);
+//   }, []);
+
+//   console.log('App render');
+//   return <Greeting name='Ruben' />;
+// }
+
+// export default App;

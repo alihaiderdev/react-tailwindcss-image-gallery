@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ImageCard = ({ image }) => {
   // <div className='max-w-sm rounded overflow-hidden shadow-lg'>
   return (
